@@ -12,7 +12,7 @@ public class Fibonacci {
             if (i < 2) {
                 fibo[i] = 1;
             }else{
-                fibo[i]=fibo[i=1] + fibo [i-1] ;
+                fibo[i]=fibo[i=2] + fibo [i-1] ;
             }
         }
         System.out.println(Arrays.toString(fibo));
