@@ -14,23 +14,29 @@ public class DuplicateWord {
          */
 
         String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
-        String[] words = st.split(" ");
-        int dpw = 1;
+        String item[] = st.split(" ");
 
-        for (int i = 0; i < words.length; i++) {
+        HashMap<String, Integer> map = new HashMap<>();
 
+        for (String t : item) {
+            if (map.containsKey(t)) {
+                map.put(t, map.get(t) + 1);
 
-            for (int j = i + 1; j < words.length; j++) {
-                if (words[i].equals(words[j])) {
-                    dpw = dpw + 1;
-                    words[j] = "0";
-                }
-                if (words[i] != "0")
-                    System.out.println(words[i] + "--" + dpw);
+            } else {
+                map.put(t, 1);
             }
         }
-
+        Set<String> keys = map.keySet();
+        for (String key : keys) {
+            System.out.println(key);
+            System.out.println(map.get(key));
+        }
 
     }
 }
+
+
+
+
+
 
