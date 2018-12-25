@@ -258,18 +258,24 @@ What are the testing Framework available in java?
 A:JUnit,Selenium,Rest Assured,Spock Framework.
 
 Difference between jUnit and testNG?
+
 A:Both Testing and Junit are Testing framework used for Unit Testing. TestNG is similar to JUnit. Few more
 functionalities are added to it that makes TestNG more powerful than JUnit.
 
 What are the dependencies for this project?
-A:
+A:1.mongo-java-driver-3.4.0
+ 2. mysql-connector-java-5.1.41-bin.jar
+ 3.testng-6.8.7.jar
+
 what is dependency injection in java?
 A: framework class, usually called the dependency container, could analyze the dependencies of this class. With this
 analysis it is able to create an instance of the class and inject the objects into the defined dependencies, via Java
 reflection.If dependency injection is used, a Java class can be tested in isolation
 
 What is static binding and dynamic binding?
-A:Overloading and Overriding.
+A:Static binding in Java occurs during compile time while dynamic binding occurs during runtime. private , final
+and static methods and variables use static binding and are bonded by compiler while virtual methods are bonded
+during runtime based upon runtime object.
 
 
 
