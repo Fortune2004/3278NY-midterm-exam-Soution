@@ -24,7 +24,7 @@ public class PrimeNumber {
 					System.out.println(i);
 
 				} else {
-					
+
 				}
 			}
 
