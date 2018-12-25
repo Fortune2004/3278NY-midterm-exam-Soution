@@ -8,6 +8,45 @@ public class Pattern {
 		 *
 		 *
 		 */
+
+		int vp = 0;
+		for(int i =100; i> 0; i--){
+			vp++;
+
+			if(vp <= 10){
+				System.out.println(i+" ");
+
+
+			}else {
+
+				for(i =90; i>0;i-=2){
+					if(vp > 10 && vp <=20) {
+						System.out.println(i + " ");
+						vp++;
+
+
+					}else{
+
+						for(i =70; i >= 0; i-= 3){
+							if (vp>20 && vp<=30) {
+								System.out.println(i + " ");
+								vp++;
+
+							}else{
+
+								for (i =30; i>=0; i-=4){
+									if(vp>30 && vp<=40){
+										System.out.println(i + " ");
+										vp++;
+									}
+								}
+							}
+						}
+
+					}
+				}
+			}
+		}
 		
 
 
