@@ -1,6 +1,6 @@
 package design;
 
-public class FortuneEmployee {
+public class FortuneEmployee extends EmployeeInfo {
 
 	/**
 	 * FortuneEmployee class has a main methods where you will be able to create Object from
@@ -14,6 +14,17 @@ public class FortuneEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
+
+		EmployeeInfo einfo1 = new EmployeeInfo();
+
+		EmployeeInfo einfo2   = new EmployeeInfo(101);
+		einfo2.EntireDepartment();
+		einfo2.assignDepartment();
+		einfo2.calculateSalary();
+		einfo2.calculateEmployeeBonus(2);
+		einfo2.calculateEmployeePension();
+
+		EmployeeInfo einfo3    = new EmployeeInfo("Salma",102);
 		
 
 
