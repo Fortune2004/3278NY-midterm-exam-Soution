@@ -14,28 +14,35 @@ public class DetermineLargestWord {
         String s="Human brain is a biological learning machine";
         Map<Integer, String> wordNLength = findTheLargestWord(s);
 
-        //implement
+        System.out.println("Word length from the given sentence is "+wordNLength);
+        System.out.println("Largest word from the given sentence is "+largestWord(s));
+
+
+    }
+
+    public static Map<Integer, String> findTheLargestWord(String givenWord){
+        Map<Integer, String> map = new HashMap<Integer, String>();
+        String st = "";
+
+        String[] sep = givenWord.split(" ");
+
+        for (int i = 0; i < sep.length; i++) {
+            map.put(sep[i].length(), sep[i]);
+        }
+        return map;
+    }
+
+    public static String largestWord(String givenWord) {
+        DetermineLargestWord dt = new DetermineLargestWord();
+        Map<Integer, String> wordNLength = dt.findTheLargestWord(givenWord);
         int largest = 0;
         String largeValue = "";
-        for(Map.Entry<Integer, String> checkLength : wordNLength.entrySet()){
-            if(largest< checkLength.getKey()) {
+        for (Map.Entry<Integer, String> checkLength : wordNLength.entrySet()) {
+            if (largest < checkLength.getKey()) {
                 largest = checkLength.getKey();
                 largeValue = checkLength.getValue();
             }
         }
-        System.out.println("Largest word: "+largeValue+" length: "+largest);
-
-    }
-
-    public static Map<Integer, String> findTheLargestWord(String wordGiven){
-        Map<Integer, String> map = new HashMap<Integer, String>();
-        String st = "";
-        String[] split = wordGiven.split(" ");
-
-        for(int i=0;i<split.length;i++){
-            map.put(split[i].length(),split[i]);
-        }
-
-        return map;
+        return largeValue;
     }
 }

@@ -1,6 +1,6 @@
 package design;
 
-public abstract class Location {
+public abstract class Origin {
 
 
         final String p1 = "Dhaka";

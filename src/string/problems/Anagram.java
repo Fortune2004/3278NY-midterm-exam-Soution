@@ -13,30 +13,34 @@ public class Anagram {
 
 
     public static void main(String[] args) {
-        String b = "APPLE";
-        String e = "ELPPA";
-        isAnagram(b, e);
+        //Write a Java Program to check if the two String are Anagram. Two String are called Anagram when there is
+        //same character but in different order.For example,"CAT" and "ACT", "ARMY" and "MARY".
+        String x = "CAT";
+        String y = "ACT";
+        boolean i = Anagram.isAnagram(x,y);
 
-        System.out.println(isAnagram(b, e));
+        if (i==true){
+            System.out.println("\""+x+"\" and \""+y+"\" is Anagram.");
+        }else{System.out.println(x+" and "+y+" is not Anagram.");}
+
     }
 
-    public static boolean isAnagram(String str1, String str2) {
+    public static boolean isAnagram(String v1, String v2) {
 
-        if (str1.length() != str2.length()) {
+        if (v1.length() != v2.length()) {
             return false;
-
         }
+        v1 = v1.toUpperCase();
+        v2 = v2.toUpperCase();
+        char[] p1 = v1.toCharArray();
+        Arrays.sort(p1);
+        char[] p2 = v2.toCharArray();
+        Arrays.sort(p2);
 
-        str1 = str1.toUpperCase();
-        str2 = str2.toUpperCase();
-        char[] str1c = str1.toCharArray();
-        Arrays.sort(str1c);
-        char[] str2c = str2.toCharArray();
-        Arrays.sort(str2c);
-        return Arrays.equals(str1c, str2c);
-
+        return Arrays.equals(p1, p2);
     }
 }
+
 
 
 

@@ -14,29 +14,45 @@ public class DuplicateWord {
          */
 
         String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
-        String item[] = st.split(" ");
-
-        HashMap<String, Integer> map = new HashMap<>();
-
-        for (String t : item) {
-            if (map.containsKey(t)) {
-                map.put(t, map.get(t) + 1);
-
-            } else {
-                map.put(t, 1);
-            }
-        }
-        Set<String> keys = map.keySet();
-        for (String key : keys) {
-            System.out.println(key);
-            System.out.println(map.get(key));
-        }
+        Set<String> duplicates = duplicateWords(st);
+        System.out.println("Given String is : " + st);
+        System.out.println("Duplicates words are : " + duplicates);
 
     }
+
+    public static Set<String> duplicateWords(String input) {
+
+        if (input == null || input.isEmpty()) {
+            return Collections.emptySet();
+        }
+        Set<String> duplicates = new HashSet<>();
+
+        String[] words = input.split(" ");
+        int length =  input.length() / words.length;
+        System.out.println("Average length of words: " + length);
+
+        Set<String> set = new HashSet<>();
+
+        ArrayList<String> arraylist = new ArrayList<String>();
+
+        for (String word : words) {
+            arraylist.add(word);
+            if (!set.add(word)) {
+
+                duplicates.add(word);
+
+            }
+        }
+
+        for (String count : arraylist) {
+            if (Collections.frequency(arraylist, count) > 1) {
+                System.out.println("Number of occurrence of: " + count + " is: " + Collections.frequency(arraylist, count));
+            }
+
+        }
+        return duplicates;
+    }
+
 }
-
-
-
-
 
 

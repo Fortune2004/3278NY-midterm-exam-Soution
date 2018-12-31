@@ -9,26 +9,29 @@ public class Palindrome {
 
 
 
-            public static void checkPalindrome(String s)
-            {
-                // reverse the given String
-                String reverse = new StringBuffer(s).reverse().toString();
+    public static boolean isPalindrome(String string) {
 
-                // check whether the string is palindrome or not
-                if (s.equals(reverse))
-                    System.out.println("Yes");
+        String word = string;
+        StringBuilder palindrome = new StringBuilder();
+        int wordLength = word.length();
 
-                else
-                    System.out.println("No");
-            }
-
-            public static void main (String[] args)
-               throws java.lang.Exception
-            {
-                checkPalindrome("dad");
-                checkPalindrome("mom");
-            }
+        for (int i = 0; i < wordLength; i++) {
+            palindrome.append(word.charAt(wordLength - 1 - i));
         }
+        String revPalindrome = new String(palindrome);
+
+        if (word.matches(revPalindrome)) return true;
+        else return false;
+    }
+    public static void main(String[] args) {
+
+
+        String s="Racecar";
+
+        if (isPalindrome(s.toUpperCase())) System.out.println(s+ " is Palindrome");
+        else System.out.println(s+ " is not palindrome");
+    }
+}
 
 
 

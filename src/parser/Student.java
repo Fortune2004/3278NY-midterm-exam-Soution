@@ -1,6 +1,18 @@
 package parser;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Student implements Serializable {
 
@@ -52,10 +64,10 @@ public class Student implements Serializable {
 		this.id = id;
 	}
 
-	
+
 	@Override
 	public String toString(){
 		return "Student" + "("+"id= "+id+")"+ firstName+" "+lastName+" "+" Grade = "+score;
 	}
-	
+
 }

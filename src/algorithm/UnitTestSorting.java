@@ -4,73 +4,89 @@ import org.testng.Assert;
 
 public class UnitTestSorting {
 
-    /*
-     This class is about Unit testing for Sorting Algorithm.
-    */
+
+    /*This class is about Unit testing for Sorting Algorithm.
+            */
     public static void main(String[] args) {
-        int [] unSortedArray = {6,9,2,5,1,0,4};
-        int [] sortedArray =   {0,1,2,4,5,6,9};
+        int[] unSortedArray = {6, 9, 2, 5, 1, 0, 4};
+        int[] sortedArray = {0, 1, 2, 4, 5, 6, 9};
         //Create Sort object
         Sort sort = new Sort();
         //apply unsorted array to selectionSort.
-        sort.selectionSort(unSortedArray);
+
         //verify if the unsorted array is sorted by the selection sort algorithm.
         try {
-            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
-        }catch(Exception ex){
-            ex.getMessage();
-        }
-        //bubble sort
-        unSortedArray = new int[]{6,9,2,5,1,0,4};
-        sort.bubbleSort(unSortedArray);
-        try {
-            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
-        }catch(Exception ex){
-            ex.getMessage();
+            int[] actual = sort.selectionSort(unSortedArray);
+            Assert.assertEquals(actual, sortedArray);
+            System.out.println("Selection sort unit test status,passed");
+        } catch (AssertionError ex) {
+            System.out.println("Selection sort unit test: status,failed");
         }
 
-        //insertion sort
-        unSortedArray = new int[]{6,9,2,5,1,0,4};
-        sort.insertionSort(unSortedArray);
+        //Now implement Unit test for rest of the soring algorithm...................below
+
+        //verify if the unsorted array is sorted by the Insertion sort algorithm.
         try {
-            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
-        }catch(Exception ex){
-            ex.getMessage();
+            int[] actual = sort.insertionSort(unSortedArray);
+            Assert.assertEquals(actual, sortedArray);
+            System.out.println("Insertion sort unit test status, passed");
+        } catch (AssertionError ex) {
+            System.out.println("Insertion sort unit test status, failed");
         }
 
-        /*//merge sort
-        unSortedArray = new int[]{6,9,2,5,1,0,4};
-        sort.mergeSort(unSortedArray,0,unSortedArray.length-1);
+        //verify if the unsorted array is sorted by the Bubble sort algorithm.
         try {
-            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
-        }catch(Exception ex){
-            ex.getMessage();
+            int[] actual = sort.bubbleSort(unSortedArray);
+            Assert.assertEquals(actual, sortedArray);
+            System.out.println("Bubble sort unit test status, passed");
+        } catch (AssertionError ex) {
+            System.out.println("Bubble sort unit test status, failed");
         }
-        //quick sort
-        unSortedArray = new int[]{6,9,2,5,1,0,4};
-        sort.quickSort(unSortedArray,0,unSortedArray.length-1);
-        try {
-            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
-        }catch(Exception ex){
-            ex.getMessage();
-        }
-        //heap sort
-        unSortedArray = new int[]{6,9,2,5,1,0,4};
-        sort.heapSort(unSortedArray,unSortedArray.length);
-        try {
-            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
-        }catch(Exception ex){
-            ex.getMessage();
-        }
-        //bucket sort
-        unSortedArray = new int[]{6,9,2,5,1,0,4};
-        sort.bucketSort(unSortedArray,9);
-        try {
-            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
-        }catch(Exception ex){
-            ex.getMessage();
-        }*/
 
+        //verify if the unsorted array is sorted by the Merge sort algorithm.
+        try {
+            int[] actual = sort.mergeSort(unSortedArray);
+            Assert.assertEquals(actual, sortedArray);
+            System.out.println("Merge sort unit test status, passed");
+        } catch (AssertionError ex) {
+            System.out.println("Merge sort unit test status, failed");
+        }
+
+        //verify if the unsorted array is sorted by the quick sort algorithm.
+        try {
+            int[] actual = sort.quickSort(unSortedArray);
+            Assert.assertEquals(actual, sortedArray);
+            System.out.println("Quick sort unit test status, passed");
+        } catch (AssertionError ex) {
+            System.out.println("Quick sort unit test status, failed");
+        }
+
+        //verify if the unsorted array is sorted by the heap sort algorithm.
+        try {
+            int[] actual = sort.heapSort(unSortedArray);
+            Assert.assertEquals(actual, sortedArray);
+            System.out.println("Heap sort unit test status, passed");
+        } catch (AssertionError ex) {
+            System.out.println("Heap sort unit test status, failed");
+        }
+
+        //verify if the unsorted array is sorted by the bucket sort algorithm.
+        try {
+            int[] actual = sort.bucketSort(unSortedArray);
+            Assert.assertEquals(actual, sortedArray);
+            System.out.println("Bucket sort unit test status, passed");
+        } catch (AssertionError ex) {
+            System.out.println("Bucket sort unit test status, failed");
+        }
+
+        //verify if the unsorted array is sorted by the shell sort algorithm.
+        try {
+            int[] actual = sort.shellSort(unSortedArray);
+            Assert.assertEquals(actual, sortedArray);
+            System.out.println("Shell sort unit test status, passed");
+        } catch (AssertionError ex) {
+            System.out.println("Shell sort unit test status,failed");
+        }
 
     }
 }
