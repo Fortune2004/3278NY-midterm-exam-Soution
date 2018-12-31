@@ -23,7 +23,7 @@ public class ConnectToMongoDB {
 
     public static MongoDatabase connectToMongoDB() {
         MongoClient mongoClient = new MongoClient();
-        mongoDatabase = mongoClient.getDatabase("MyData");
+        mongoDatabase = mongoClient.getDatabase("student");
         System.out.println("Database Connected");
 
         return mongoDatabase;
