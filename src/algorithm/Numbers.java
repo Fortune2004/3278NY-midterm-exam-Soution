@@ -23,7 +23,7 @@ public class Numbers {
 
 	public static void main(String[] args) throws Exception {
 
-		int[] num = new int[10000];
+		int[] num = new int[1000000];
 
 		storeRandomNumbers(num);
 
@@ -140,24 +140,24 @@ public class Numbers {
 
 		//Come to conclusion about which Sorting Algo is better in given data set.
 
-//Selection Sort take: 407411 milli sec
+//Selection Sort take: 889233 milli sec
 
-//Insertion Sort take: 374962 milli sec
+//Insertion Sort take: 574962 milli sec
 
-//Bubble Sort take: 969469 milli sec
+//Bubble Sort take: 759469 milli sec
 
-//Merge Sort take: 39 milli sec
+//Merge Sort take: 40 milli sec
 
-//Quick Sort take: 75 milli sec
+//Quick Sort take: 35 milli sec
 
-//Heap Sort take: 127 milli sec
+//Heap Sort take: 126 milli sec
 
-//Bucket Sort take: 42 milli sec
+//Bucket Sort take: 39 milli sec
 
-//Shell Sort take: 47 milli sec
+//Shell Sort take: 41 milli sec
 
-		//Slowest algorithm is Bubble sort
-		//Fastest algorithm is Merge sort
+		//Slowest algorithm is Selection sort
+		//Fastest algorithm is quick sort
 
 
 

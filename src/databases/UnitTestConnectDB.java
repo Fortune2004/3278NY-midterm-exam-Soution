@@ -6,7 +6,7 @@ public class UnitTestConnectDB {
     public static void main(String[] args) throws Exception {
         try {
             ConnectToSqlDB con = new ConnectToSqlDB();
-            Assert.assertEquals(con.readDataBase("car", "info"), con.readDataBase("car", "info"));
+            Assert.assertEquals(con.readDataBase("", ""), con.readDataBase("", ""));
             System.out.println("Test passed");
         } catch (AssertionError as) {
             as.printStackTrace();
